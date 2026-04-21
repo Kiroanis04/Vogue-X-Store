@@ -1,0 +1,176 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { background-color: #ffffff; color: #1a1a1a; }
+
+.italic { font-style: italic; font-weight: 900; letter-spacing: -2px; }
+
+/* Header & Nav */
+.top-bar {
+    background: #000;
+    color: #fff;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+.logo { font-size: 28px; }
+
+.nav-links { display: flex; list-style: none; gap: 30px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav-icons { display: flex; gap: 20px; cursor: pointer; }
+
+.cart-icon { position: relative; }
+
+.cart-icon span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content p { letter-spacing: 5px; margin-bottom: 10px; }
+
+.hero-content h1 { font-size: 80px; font-weight: 900; line-height: 1; margin-bottom: 30px; }
+
+.btn-main {
+    padding: 15px 40px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-main:hover { background: #000; color: #fff; }
+
+/* Product Grid */
+.products-container { padding: 80px 5%; }
+
+.section-title { font-size: 32px; margin-bottom: 40px; text-transform: uppercase; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card { position: relative; transition: 0.3s; }
+
+.product-img {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background: #f4f4f4;
+}
+
+.product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+
+.product-card:hover img { transform: scale(1.1); }
+
+.add-to-cart {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card:hover .add-to-cart { bottom: 0; }
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff4757;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-info { margin-top: 15px; }
+
+.product-info h3 { font-size: 16px; text-transform: uppercase; margin-bottom: 5px; }
+
+.price { font-weight: bold; font-size: 18px; }
+
+/* Pinterest Gallery */
+.gallery-section { padding: 80px 5%; background: #f9f9f9; text-align: center; }
+
+.gallery-section h3 { margin-bottom: 40px; letter-spacing: 2px; }
+
+.pinterest-grid {
+    column-count: 4;
+    column-gap: 15px;
+}
+
+.pinterest-grid .item { margin-bottom: 15px; overflow: hidden; border-radius: 8px; }
+
+.pinterest-grid img { width: 100%; display: block; transition: 0.3s; }
+
+.pinterest-grid img:hover { transform: scale(1.05); filter: brightness(0.8); }
+
+/* Footer */
+footer { padding: 60px 5%; background: #000; color: #fff; text-align: center; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 50px; }
+    .nav-links { display: none; }
+    .pinterest-grid { column-count: 2; }
+}
